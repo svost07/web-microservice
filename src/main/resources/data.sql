@@ -1,6 +1,7 @@
-insert into taux_change (id,devise_src,devise_dest,taux,port)
-values(10001,'EUR','USD',1.17,0);
-insert into taux_change(id,devise_src,devise_dest,taux,port)
-values(10002,'EUR','JPY',130,0);
-insert into taux_change(id,devise_src,devise_dest,taux,port)
-values(10003,'USD','GBP',0.75,0);
+insert into bank_account (iban, account_type, interest, fees, port)
+values('FR182621826628','Compte courant',0.0,0.02,0);
+insert into bank_account (iban, account_type, interest, fees, port)
+values('FR182621826919','Compte courant',0.0,0.02,0);
+insert into bank_account (iban, account_type, interest, fees, port)
+values('FR182621829911','Compte courant',0.0,0.02,0);
+
