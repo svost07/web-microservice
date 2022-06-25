@@ -25,8 +25,6 @@ public class BankAccount {
     @Column(name="fees")
     private BigDecimal fees;
 
-    private int port;
-
     public BankAccount(){}
 
     public BankAccount(String iban, String account, BigDecimal interest, BigDecimal fees) {
