@@ -7,7 +7,7 @@ CREATE TABLE bank_account (
   fees DOUBLE NOT NULL
 );
 
-INSERT INTO employees (iban, account_type, interest, fees) VALUES
-  ('FR182621826628', 'Compte courant', 0.0, 0.02),
-  ('FR182621826919', 'Compte courant', 0.0, 0.02),
-  ('FR182621829911', 'Compte courant', 0.0, 0.02);
+INSERT INTO bank_account (iban, account_type, interest, fees) VALUES
+  ('FR000000000001', 'Compte courant', 0.0, 0.02),
+  ('FR000000000002', 'Compte courant', 0.0, 0.02),
+  ('FR000000000003', 'Compte courant', 0.0, 0.02);

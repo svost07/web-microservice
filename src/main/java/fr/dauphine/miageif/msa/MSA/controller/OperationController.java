@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import java.util.Optional;
-
+import java.util.List;
 import fr.dauphine.miageif.msa.MSA.model.Operation;
 import fr.dauphine.miageif.msa.MSA.service.OperationService;
 
@@ -28,18 +28,38 @@ public class OperationController {
     }
 
     /**
-     * Read - Get one employee
+     * Read - Get one operation with the id
      * @param id The id of the operation
      * @return An BankAccount object full filled
      */
     @GetMapping("/operation/{id}")
-    public Operation getEmployee(@PathVariable("id") final Long id) {
+    public Operation getOperation(@PathVariable("id") final Long id) {
         Optional<Operation> operation = operationService.getOperation(id);
         if(operation.isPresent()) {
             return operation.get();
         } else {
             return null;
         }
+    }
+
+    /**
+     * Read - Get one operation with the origin iban
+     * @param id The iban of the operation origin
+     * @return An BankAccount object full filled
+     */
+    @GetMapping("/operation/source/{id}")
+    public List<Operation> getOperationBySourceId(@PathVariable("id") final String id) {
+        return operationService.getOperationBySourceId(id);
+    }
+
+    /**
+     * Read - Get one operation with the operation type
+     * @param id The type of the operation
+     * @return An BankAccount object full filled
+     */
+    @GetMapping("/operation/type/{id}")
+    public List<Operation> getOperationByTypeId(@PathVariable("id") final String id) {
+        return operationService.getOperationByTypeId(id);
     }
 
     /**

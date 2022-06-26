@@ -1,5 +1,4 @@
 package fr.dauphine.miageif.msa.MSA.model;
-import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,7 +24,7 @@ public class Operation {
     private Double amount;
 
     @Column(name="operation_type")
-    private String op_type;
+    private String type;
 
     @Column(name="iban_source")
     private String source;
@@ -41,7 +40,7 @@ public class Operation {
     public Operation(Long id, Double amount, String op_type, String source, String target) {
         super();
         this.id = id;
-        this.op_type = op_type;
+        this.type = op_type;
         this.source = source;
         this.target = target;
         this.amount = amount;
@@ -55,7 +54,7 @@ public class Operation {
     public String toString() {
         return "Operation{" +
                 "id=" + id +
-                ", operation_type='" + op_type + '\'' +
+                ", operation_type='" + type + '\'' +
                 ", iban_source=" + source + '\'' +
                 ", iban_target=" + target + '\'' +
                 ", amount=" + amount + '\'' +
