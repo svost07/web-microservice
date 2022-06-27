@@ -50,7 +50,7 @@ public class Operation {
     /* grâce à l'annotation @RestController.
     Spring sait alors que les réponses aux requêtes
     qu'il vous passe devront être très probablement en format JSON.*/
-    @Override
+    /*@Override
     public String toString() {
         return "Operation{" +
                 "id=" + id +
@@ -59,6 +59,6 @@ public class Operation {
                 ", iban_target=" + target + '\'' +
                 ", amount=" + amount + '\'' +
                 '}';
-    }
+    }*/
 
 }

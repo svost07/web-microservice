@@ -1,11 +1,9 @@
 package fr.dauphine.miageif.msa.MSA.controller;
 
+import fr.dauphine.miageif.msa.MSA.model.BankAccount;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Optional;
 import java.util.List;
 import fr.dauphine.miageif.msa.MSA.model.Operation;
@@ -72,4 +70,11 @@ public class OperationController {
         return operationService.saveOperation(operation);
     }
 
+    @DeleteMapping("/operation/{id}")
+    public void delete_operation(@PathVariable("id") final long id) {
+        Optional<Operation> operation = operationService.getOperation(id);
+        if(operation.isPresent()) {
+            operationService.deleteOperation(id);
+        }
+    }
 }

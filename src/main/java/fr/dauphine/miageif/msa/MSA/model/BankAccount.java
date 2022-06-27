@@ -39,7 +39,7 @@ public class BankAccount {
     /* grâce à l'annotation @RestController.
     Spring sait alors que les réponses aux requêtes
     qu'il vous passe devront être très probablement en format JSON.*/
-    @Override
+    /*@Override
     public String toString() {
         return "BankAccount{" +
                 "IBAN=" + iban +
@@ -47,5 +47,5 @@ public class BankAccount {
                 ", interest=" + interest + '\'' +
                 ", fees=" + fees +
                 '}';
-    }
+    }*/
 }
